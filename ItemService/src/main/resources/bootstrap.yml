@@ -12,3 +12,9 @@ spring:
 
 server:
   port: 4000
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh, health, beans
