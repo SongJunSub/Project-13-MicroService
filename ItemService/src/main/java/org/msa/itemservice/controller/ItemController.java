@@ -5,24 +5,48 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.msa.itemservice.dto.ItemDTO;
 import org.msa.itemservice.dto.ResponseDTO;
+import org.msa.itemservice.dto.constant.ItemType;
 import org.msa.itemservice.service.ItemService;
+import org.msa.itemservice.valid.ItemTypeValid;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("v1/item")
 @Slf4j
 @RequiredArgsConstructor
+@Validated
 public class ItemController {
 
     private final ItemService itemService;
 
-    @PostMapping("/add")
-    public ResponseEntity<ResponseDTO> addItem(@Valid @RequestBody ItemDTO itemDTO) {
+    @PostMapping("/add/{itemType}")
+    public ResponseEntity<ResponseDTO> addItem(@Valid @RequestBody ItemDTO itemDTO, @ItemTypeValid @PathVariable String itemType) {
         ResponseDTO.ResponseDTOBuilder responseDTOBuilder = ResponseDTO.builder();
+
+        /*
+        log.debug("Item Type = {}", itemType);
+        boolean hasItemType = false;
+        ItemType[] itemTypes = ItemType.values();
+
+        for(ItemType item : itemTypes) {
+            hasItemType = item.hasItemCd(itemType);
+
+            if(hasItemType) break;
+        }
+
+        if(!hasItemType) {
+            responseDTOBuilder.code("500").message("Invalid Item Type : " + itemType);
+
+            return ResponseEntity.ok(responseDTOBuilder.build());
+        }
+        else {
+            itemDTO.setItemType(itemType);
+        }
+        */
+
+        itemDTO.setItemType(itemType);
 
         itemService.insertItem(itemDTO);
         log.debug("Request Add Item ID = {}", itemDTO.getId());

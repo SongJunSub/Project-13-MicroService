@@ -18,6 +18,8 @@ public class ItemDTO {
     @Size(max = 200, message = "설명은 최대 200자까지 작성 가능합니다.")
     private String description;
 
+    private String itemType;
+
     @Positive
     private Long count;
 

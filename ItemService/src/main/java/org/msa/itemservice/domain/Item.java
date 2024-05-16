@@ -24,6 +24,9 @@ public class Item {
     @Column(length = 30)
     private String description;
 
+    @Column(length = 1)
+    private String itemType;
+
     @Column(length = 10)
     private Long count;
 

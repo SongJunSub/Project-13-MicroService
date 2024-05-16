@@ -23,6 +23,7 @@ public class ItemService {
                 .id(itemDTO.getId())
                 .name(itemDTO.getName())
                 .description(itemDTO.getDescription())
+                .itemType(itemDTO.getItemType())
                 .count(itemDTO.getCount())
                 .createdAt(date)
                 .updatedAt(date)
