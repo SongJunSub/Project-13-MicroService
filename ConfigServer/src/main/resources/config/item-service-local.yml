@@ -3,7 +3,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://127.0.0.1:3306/MICRO_SERVICE
     username: root
-    password: 1234
+    password: '{cipher}6c4ec6f3fe6b878d1a507d75f422e98898b9118bef3a8ca2389ecf199117b587'
   jpa:
     hibernate:
       ddl-auto: create
@@ -32,3 +32,7 @@ springdoc:
     path: /swagger-ui.html
     disable-swagger-default-url: true
     display-query-params-without-oauth2: true
+
+token:
+  expiration_time: 86400000
+  secret: SECU100
