@@ -6,6 +6,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.msa.itemservice.dto.ItemDTO;
 import org.msa.itemservice.dto.ResponseDTO;
 import org.msa.itemservice.dto.constant.ItemType;
+import org.msa.itemservice.exception.ApiException;
 import org.msa.itemservice.service.ItemService;
 import org.msa.itemservice.valid.ItemTypeValid;
 import org.springframework.http.ResponseEntity;
@@ -22,7 +23,7 @@ public class ItemController {
     private final ItemService itemService;
 
     @PostMapping("/add/{itemType}")
-    public ResponseEntity<ResponseDTO> addItem(@Valid @RequestBody ItemDTO itemDTO, @ItemTypeValid @PathVariable String itemType) {
+    public ResponseEntity<ResponseDTO> addItem(@Valid @RequestBody ItemDTO itemDTO, @ItemTypeValid @PathVariable String itemType) throws Exception {
         ResponseDTO.ResponseDTOBuilder responseDTOBuilder = ResponseDTO.builder();
 
         /*
@@ -43,6 +44,15 @@ public class ItemController {
         }
         else {
             itemDTO.setItemType(itemType);
+        }
+        */
+
+        /*
+        try {
+            Integer.parseInt("TEST");
+        }
+        catch (Exception e){
+            throw new ApiException("ApiException Test");
         }
         */
 
