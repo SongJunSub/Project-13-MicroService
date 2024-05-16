@@ -1,5 +1,6 @@
 package org.msa.itemservice.controller;
 
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.msa.itemservice.dto.ItemDTO;
@@ -20,7 +21,7 @@ public class ItemController {
     private final ItemService itemService;
 
     @PostMapping("/add")
-    public ResponseEntity<ResponseDTO> addItem(@RequestBody ItemDTO itemDTO) {
+    public ResponseEntity<ResponseDTO> addItem(@Valid @RequestBody ItemDTO itemDTO) {
         ResponseDTO.ResponseDTOBuilder responseDTOBuilder = ResponseDTO.builder();
 
         itemService.insertItem(itemDTO);
