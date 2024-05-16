@@ -1,0 +1,32 @@
+2024-05-16T17:12:36.054+09:00  INFO 2391 --- [restartedMain] o.m.itemservice.ItemServiceApplication   : Starting ItemServiceApplication using Java 21.0.3 with PID 2391 (/Users/junsub_dev/Project/MicroService/MicroService/ItemService/build/classes/java/main started by junsub_dev in /Users/junsub_dev/Project/MicroService/MicroService)
+2024-05-16T17:12:36.054+09:00  INFO 2391 --- [restartedMain] o.m.itemservice.ItemServiceApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-05-16T17:12:36.068+09:00  INFO 2391 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-05-16T17:12:36.068+09:00  INFO 2391 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-05-16T17:12:36.352+09:00  INFO 2391 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-05-16T17:12:36.357+09:00  INFO 2391 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-05-16T17:12:36.357+09:00  INFO 2391 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-05-16T17:12:36.370+09:00  INFO 2391 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-05-16T17:12:36.370+09:00  INFO 2391 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 302 ms
+2024-05-16T17:12:36.469+09:00  INFO 2391 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-05-16T17:12:36.479+09:00  INFO 2391 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-05-16T17:12:36.483+09:00  INFO 2391 --- [restartedMain] o.m.itemservice.ItemServiceApplication   : Started ItemServiceApplication in 0.562 seconds (process running for 0.793)
+2024-05-16T17:18:13.293+09:00  INFO 2391 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-05-16T17:18:13.293+09:00  INFO 2391 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-05-16T17:18:13.293+09:00  INFO 2391 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2024-05-16T17:20:12.649+09:00  INFO 2632 --- [restartedMain] o.m.itemservice.ItemServiceApplication   : Starting ItemServiceApplication using Java 21.0.3 with PID 2632 (/Users/junsub_dev/Project/MicroService/MicroService/ItemService/build/classes/java/main started by junsub_dev in /Users/junsub_dev/Project/MicroService/MicroService)
+2024-05-16T17:20:12.650+09:00 DEBUG 2632 --- [restartedMain] o.m.itemservice.ItemServiceApplication   : Running with Spring Boot v3.2.5, Spring v6.1.6
+2024-05-16T17:20:12.650+09:00  INFO 2632 --- [restartedMain] o.m.itemservice.ItemServiceApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-05-16T17:20:12.664+09:00  INFO 2632 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-05-16T17:20:12.664+09:00  INFO 2632 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-05-16T17:20:12.923+09:00  INFO 2632 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-05-16T17:20:12.928+09:00  INFO 2632 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-05-16T17:20:12.928+09:00  INFO 2632 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-05-16T17:20:12.939+09:00  INFO 2632 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-05-16T17:20:12.939+09:00  INFO 2632 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 275 ms
+2024-05-16T17:20:13.026+09:00  INFO 2632 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-05-16T17:20:13.037+09:00  INFO 2632 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-05-16T17:20:13.040+09:00  INFO 2632 --- [restartedMain] o.m.itemservice.ItemServiceApplication   : Started ItemServiceApplication in 0.511 seconds (process running for 0.712)
+2024-05-16T17:20:16.616+09:00  INFO 2632 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-05-16T17:20:16.616+09:00  INFO 2632 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-05-16T17:20:16.617+09:00  INFO 2632 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-05-16T17:20:16.653+09:00 DEBUG 2632 --- [http-nio-8080-exec-2] o.m.i.controller.ItemController          : Request Add Item ID = test1

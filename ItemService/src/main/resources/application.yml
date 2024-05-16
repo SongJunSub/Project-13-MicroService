@@ -1,0 +1,10 @@
+logging:
+  file:
+    name: logs/api.log
+  logback:
+    rolling policy:
+      max-history: 10
+      max-file-size: 500MB
+  level:
+    root: info
+    org.msa.itemservice: DEBUG
