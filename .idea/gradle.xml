@@ -20,6 +20,14 @@
         </option>
       </GradleProjectSettings>
       <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/GatewayServer" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/GatewayServer" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
         <option name="externalProjectPath" value="$PROJECT_DIR$/ItemService" />
         <option name="gradleJvm" value="21" />
         <option name="modules">
