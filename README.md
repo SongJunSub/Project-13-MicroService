@@ -4,7 +4,7 @@
 * Programming Language
   * Java
 * Framework
-  * Spring Boot / Spring Cloud / JPA
+  * Spring Boot / Spring Cloud / JPA / JWT
 * RDBMS
   * MySQL
 * Container
