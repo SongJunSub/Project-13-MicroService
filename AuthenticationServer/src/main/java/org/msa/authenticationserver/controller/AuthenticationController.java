@@ -7,6 +7,7 @@ import org.msa.authenticationserver.domain.Account;
 import org.msa.authenticationserver.dto.AccountDTO;
 import org.msa.authenticationserver.dto.ResponseDTO;
 import org.msa.authenticationserver.servie.AccountService;
+import org.msa.authenticationserver.util.JWTUtil;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -62,7 +63,7 @@ public class AuthenticationController {
     }
 
     private String getToken(AccountDTO accountDTO) {
-        return null;
+        return JWTUtil.generate(accountDTO);
     }
 
 
