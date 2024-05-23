@@ -1,13 +1,13 @@
-package org.msa.autenticationserver;
+package org.msa.authenticationserver;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class AutenticationServerApplication {
+public class AuthenticationServerApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(AutenticationServerApplication.class, args);
+		SpringApplication.run(AuthenticationServerApplication.class, args);
 	}
 
 }
