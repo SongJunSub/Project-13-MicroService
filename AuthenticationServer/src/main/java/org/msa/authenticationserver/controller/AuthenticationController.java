@@ -39,7 +39,7 @@ public class AuthenticationController {
         return ResponseEntity.ok(builder.build());
     }
 
-    @GetMapping("/token")
+    @PostMapping("/token")
     public ResponseEntity<ResponseDTO> token(@Valid @RequestBody AccountDTO accountDTO) {
         ResponseDTO.ResponseDTOBuilder builder = ResponseDTO.builder();
 

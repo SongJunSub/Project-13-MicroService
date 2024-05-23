@@ -1,22 +1,18 @@
 spring:
-  cloud:
-    gateway:
-      routes:
-      - id: item-service
-        uri: lb://item-service
-        predicates:
-          - Path=/v1/item/**
+  config:
+    import:
+      - classpath:/config/datasource-local.yml
 
 logging:
   file:
-    name: logs/gateway.log
+    name: logs/authentication.log
   logback:
     rolling policy:
       max-history: 10
       max-file-size: 500MB
   level:
     root: info
-    org.msa.gatewayserver: DEBUG
+    org.msa.authenticationserver: DEBUG
 
 eureka:
   instance:

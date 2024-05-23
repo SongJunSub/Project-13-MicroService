@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/MICRO_SERVICE
+    username: root
+    password: '{cipher}6c4ec6f3fe6b878d1a507d75f422e98898b9118bef3a8ca2389ecf199117b587'
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
