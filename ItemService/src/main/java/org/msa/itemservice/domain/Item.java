@@ -18,6 +18,8 @@ public class Item {
     @Column(length = 30)
     private String id;
 
+    private String accountId;
+
     @Column(length = 30)
     private String name;
 
