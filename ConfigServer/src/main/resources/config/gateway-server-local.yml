@@ -1,4 +1,7 @@
 spring:
+  config:
+    import:
+      - classpath:/config/datasource-local.yml
   cloud:
     gateway:
       routes:
