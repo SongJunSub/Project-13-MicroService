@@ -2,7 +2,6 @@ package org.msa.itemservice.exception;
 
 import jakarta.servlet.http.HttpServletRequest;
 import org.msa.itemservice.dto.ResponseDTO;
-import org.springframework.boot.configurationprocessor.json.JSONException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
@@ -23,7 +22,7 @@ public class ApiExceptionHandler {
     }
 
     @ExceptionHandler(MethodArgumentNotValidException.class)
-    public ResponseEntity<?> handleValidationExceptions(MethodArgumentNotValidException e) throws JSONException {
+    public ResponseEntity<?> handleValidationExceptions(MethodArgumentNotValidException e) throws Exception {
         BindingResult bindingResult = e.getBindingResult();
         StringBuilder stringBuilder = new StringBuilder();
 
