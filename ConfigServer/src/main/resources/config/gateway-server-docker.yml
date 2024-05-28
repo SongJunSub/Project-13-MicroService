@@ -1,0 +1,31 @@
+spring:
+  config:
+    import:
+      - classpath:/config/datasource-docker.yml
+  cloud:
+    gateway:
+      routes:
+      - id: item-service
+        uri: lb://item-service
+        predicates:
+          - Path=/v1/item/**
+
+logging:
+  file:
+    name: logs/gateway.log
+  logback:
+    rolling policy:
+      max-history: 10
+      max-file-size: 500MB
+  level:
+    root: info
+    org.msa.gatewayserver: DEBUG
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://eureka-server:8761/eureka
