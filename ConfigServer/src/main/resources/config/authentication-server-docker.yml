@@ -1,0 +1,24 @@
+spring:
+  config:
+    import:
+      - classpath:/config/datasource-docker.yml
+
+logging:
+  file:
+    name: logs/authentication.log
+  logback:
+    rolling policy:
+      max-history: 10
+      max-file-size: 500MB
+  level:
+    root: info
+    org.msa.authenticationserver: DEBUG
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://eureka-server:8761/eureka

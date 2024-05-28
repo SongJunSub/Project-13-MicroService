@@ -14,5 +14,5 @@ RUN ./gradlew bootJAR
 FROM openjdk:18-slim
 WORKDIR /app
 COPY --from=builder build/libs/*.jar /app/app.jar
-EXPOSE 8761
+EXPOSE 8900
 ENTRYPOINT ["java", "-jar", "app.jar"]
