@@ -1,4 +1,4 @@
-package org.msa.itemservice.config;
+package org.msa.historyservice.config;
 
 import jakarta.jms.Queue;
 import org.apache.activemq.ActiveMQConnectionFactory;
@@ -14,18 +14,17 @@ import org.springframework.jms.core.JmsTemplate;
 @EnableJms
 public class ActiveMQConfig {
 
-    //@Value("${activemq.broker.url}")
-    private String brokerURL = "tcp://localhost:61616";
+    @Value("${activemq.broker.url}")
+    private String brokerURL;
 
-    //@Value("${activemq.broker.topic}")
-    private String topic = "item-history";
+    @Value("${activemq.broker.topic}")
+    private String topic;
 
     @Bean
     public Queue activeMQQueue() {
         return new ActiveMQQueue(topic);
     }
 
-    // ActiveMQ에 데이터를 넣고 빼기 위해 사용하는 객체이다.
     @Bean
     public JmsTemplate jmsTemplate() {
         return new JmsTemplate(activeMQConnectionFactory());
@@ -38,6 +37,16 @@ public class ActiveMQConfig {
         activeMQConnectionFactory.setBrokerURL(brokerURL);
 
         return activeMQConnectionFactory;
+    }
+
+    @Bean
+    public DefaultJmsListenerContainerFactory jmsListenerContainerFactory(ActiveMQConnectionFactory activeMQConnectionFactory) {
+        DefaultJmsListenerContainerFactory factory = new DefaultJmsListenerContainerFactory();
+
+        factory.setConnectionFactory(activeMQConnectionFactory);
+        factory.setConcurrency("5-10");
+
+        return factory;
     }
 
 }

@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/GatewayServer.main.iml" filepath="$PROJECT_DIR$/.idea/modules/GatewayServer.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/HistoryService.main.iml" filepath="$PROJECT_DIR$/.idea/modules/HistoryService.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/ItemService.main.iml" filepath="$PROJECT_DIR$/.idea/modules/ItemService.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/ItemService.test.iml" filepath="$PROJECT_DIR$/.idea/modules/ItemService.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/MicroService.iml" filepath="$PROJECT_DIR$/MicroService.iml" />
