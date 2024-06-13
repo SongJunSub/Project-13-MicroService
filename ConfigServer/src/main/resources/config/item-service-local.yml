@@ -2,6 +2,7 @@ spring:
   config:
     import:
       - classpath:/config/datasource-local.yml
+      - classpath:/config/activemq-local.yml
 
 logging:
   file:
