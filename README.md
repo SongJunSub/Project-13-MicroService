@@ -11,6 +11,8 @@
   * Kafka
 * Container
   * Docker
+* ETC
+  * Eureka
 
 ### Architecture
   * Micro Service Architecture
