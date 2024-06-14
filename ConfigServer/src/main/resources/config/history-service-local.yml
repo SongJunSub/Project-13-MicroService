@@ -3,6 +3,7 @@ spring:
     import:
       - classpath:/config/datasource-local.yml
       - classpath:/config/activemq-local.yml
+      - classpath:/config/kafka-local.yml
 
 logging:
   file:
