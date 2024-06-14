@@ -7,6 +7,8 @@
   * Spring Boot / Spring Cloud / JPA / JWT
 * RDBMS
   * MySQL
+* Streaming
+  * Kafka
 * Container
   * Docker
 
