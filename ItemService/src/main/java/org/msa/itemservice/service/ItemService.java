@@ -8,9 +8,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.msa.itemservice.domain.Item;
 import org.msa.itemservice.dto.ItemDTO;
 import org.msa.itemservice.feign.HistoryFeignClient;
-import org.msa.itemservice.properties.KafkaTopicProperties;
 import org.msa.itemservice.repository.ItemRepository;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.jms.JmsException;
 import org.springframework.jms.core.JmsTemplate;
 import org.springframework.kafka.core.KafkaTemplate;
@@ -32,10 +30,9 @@ public class ItemService {
     private final JmsTemplate jmsTemplate;
     private final Queue activeMQ;
     private final KafkaTemplate<String, String> kafkaTemplate;
-    private final KafkaTopicProperties kafkaTopicProperties;
 
     // @Value(value = "${topic.name}")
-    // private String topicName;
+    private String topicName = "item-history";
 
     ObjectMapper objectMapper = new ObjectMapper();
 
@@ -65,7 +62,7 @@ public class ItemService {
         // log.info("Rest Template Result : {}", restTemplate.postForObject("https://HISTORY-SERVICE/v1/history/save", historyMap, String.class));
         try {
             // jmsTemplate.convertAndSend(activeMQ, objectMapper.writeValueAsString(itemDTO));
-            kafkaTemplate.send(kafkaTopicProperties.getName(), objectMapper.writeValueAsString(itemDTO));
+            kafkaTemplate.send(topicName, objectMapper.writeValueAsString(itemDTO));
         }
         catch (JmsException | JsonProcessingException e) {
             throw new RuntimeException(e);
